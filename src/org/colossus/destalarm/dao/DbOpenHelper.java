@@ -16,9 +16,13 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 
-		String sql = "CREATE TABLE " + Constant.ALARM_TABLE_NAME + " ( " + Constant.ALARM_ID
-				+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + Constant.ALARM_LABEL
-				+ "varchar(100) " + ")";
+		String sql = "CREATE TABLE " + Constant.ALARM_TABLE_NAME + " ( " 
+				+ Constant.ALARM_ID		+ " INTEGER PRIMARY KEY AUTOINCREMENT, " 
+				+ Constant.ALARM_LABEL	+ " varchar(100), " 
+				+ Constant.ALARM_LAT +" Real,"
+				+ Constant.ALARM_LNG +" Real,"
+				+ Constant.ALARM_ADDRESS +" varchar(300)"				
+				+ ")";
 		db.execSQL(sql);
 	}
 

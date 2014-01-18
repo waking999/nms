@@ -1,8 +1,18 @@
 package org.colossus.destalarm.model;
 
+import org.colossus.destalarm.util.Util;
+
 public class Alarm {
 	private long id;
 	private String label;
+	private Destination dest;
+	
+	public Destination getDest() {
+		return dest;
+	}
+	public void setDest(Destination dest) {
+		this.dest = dest;
+	}
 	public long getId() {
 		return id;
 	}
@@ -17,6 +27,10 @@ public class Alarm {
 	}
 	
 	public String toString(){
-		return label;
+		if(!Util.isStringBlank(label)){
+			return label;
+		}else{
+			return dest.getAddress();
+		}
 	}
 }

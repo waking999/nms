@@ -17,4 +17,6 @@
     <string name="title_activity_message_dialog">MessageDialog</string>
     <string name="msg_cfm_btn">Confirm</string>
 	<string name="main_not_select_msg">Please Select an Item!</string>
+	<string name="add_map_text_hint">Destination</string>
+	<string name="add_not_input_address">Please input the address of the destination!</string>
 </resources>

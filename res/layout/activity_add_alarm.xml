@@ -37,4 +37,26 @@
         </EditText>
     </TableRow>
 
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/addMapText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/add_map_text_hint" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/addMapSearchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search" >
+        </ImageButton>
+    </TableRow>
+
 </TableLayout>

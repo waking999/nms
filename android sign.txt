@@ -1,0 +1,22 @@
+keytool -genkey -v -keystore nms-release-key.keystore -alias nms -keyalg RSA -keysize 2048 -validity 10000
+
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore nms-release-key.keystore nms.apk nms
+
+
+jarsigner -verify nms.apk
+
+jarsigner -verify -verbose nms.apk
+
+
+jarsigner -verify -verbose -certs nms.apk
+
+
+zipalign -v 4 nms.apk -f
+
+
+keytool -list -keystore nms-release-key.keystore
+
+keytool -list -v -keystore nms-release-key.keystore -alias nms
+
+AIzaSyBwbpYvPf1ouZyW41mfeeOVRRStsdISpAI
